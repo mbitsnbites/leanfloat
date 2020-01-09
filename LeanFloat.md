@@ -6,6 +6,8 @@
 
 LeanFloat is a simplified version of the [IEEE Standard for Floating-Point Arithmetic (IEEE 754)](https://en.wikipedia.org/wiki/IEEE_754).
 
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+
 ## Introduction
 
 TBD
