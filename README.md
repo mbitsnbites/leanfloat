@@ -13,7 +13,7 @@ For most intents and purposes it is compatible with the IEEE 754 standard, but w
 
 ## Specification
 
-[LeanFloat Specification (DRAFT)](LeanFloat.md)
+[LeanFloat Specification (DRAFT)](LeanFloat-Specification.md)
 
 ## Motivation
 
