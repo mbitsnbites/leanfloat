@@ -50,8 +50,8 @@ formats.
 *This section is non-normative.*
 
 The following binary floating-point formats, which are not specified in the
-IEEE 754 standard, are recognized by the LeanFloat with the sole purpose of
-providing a common definition:
+IEEE 754 standard, are recognized by the LeanFloat specification with the sole
+purpose of providing a common definition:
 
 | Name      | Common name         | Significand bits | Exponent bits | Exponent bias |
 | --------- | ------------------- | ---------------- | ------------- | ------------- |
