@@ -19,7 +19,7 @@ specification. Decimal floating-point formats are not supported.
 
 ### 2.1 Encoding
 
-The encoding in memory is the same as in IEEE 754, with the following
+The encoding in memory is the same as in **[IEEE754]**, with the following
 exceptions:
 
 * Denormal numbers are interpreted as zero. I.e. when the biased exponent is
@@ -49,8 +49,8 @@ formats.
 
 *This section is non-normative.*
 
-The following binary floating-point formats, which are not specified in the
-IEEE 754 standard, are recognized by the LeanFloat specification with the sole
+The following binary floating-point formats, which are not specified in
+**[IEEE754]**, are recognized by the LeanFloat specification with the sole
 purpose of providing a common definition:
 
 | Name      | Common name         | Significand bits | Exponent bits | Exponent bias |
@@ -63,15 +63,22 @@ implementation.
 
 ## 3. Denormal numbers
 
-A denormal number is one where the biased exponent is zero (all exponent field bits are zero), and the significand field is non-zero (i.e. at least one bit is set).
+A denormal number is one where the biased exponent is zero (all exponent field
+bits are zero), and the significand field is non-zero (i.e. at least one bit
+is set).
 
-Whenever a denormal number is used as an input to a floating-point operation, it is treated as the value zero. The sign bit is preserved, so that a denormal value can be interpreted as either +0 or -0.
+Whenever a denormal number is used as an input to a floating-point operation,
+it shall be treated as the value zero. The sign bit is preserved, so that a
+denormal value can be interpreted as either +0 or -0.
 
-Whenever a floating-point operation produces a result that would be a denormal value, it shall instead produce the value zero. The sign bit is preserved, so that the return value can be either +0 or -0.
+Whenever a floating-point operation produces a result that would be a denormal
+value according to **[IEEE754]**, it shall instead produce the value zero. The
+sign bit is preserved, so that the return value can be either +0 or -0.
 
 ## 4. Rounding
 
-All floating-point operations use the same rounding mode: Round to nearest, ties to even.
+All floating-point operations use the same rounding mode: Round to nearest,
+ties to even.
 
 ## 5. Exceptions
 
@@ -79,6 +86,8 @@ TBD
 
 ## A. References
 
-**[IEEE754]**<br>"IEEE 754-2019 - IEEE Standard for Floating-Point Arithmetic", URL: [https://standards.ieee.org/content/ieee-standards/en/standard/754-2019.html](https://standards.ieee.org/content/ieee-standards/en/standard/754-2019.html)
+**[IEEE754]** "IEEE 754-2019 - IEEE Standard for Floating-Point Arithmetic",
+URL: [https://standards.ieee.org/content/ieee-standards/en/standard/754-2019.html](https://standards.ieee.org/content/ieee-standards/en/standard/754-2019.html)
 
-**[CCBY4]**<br>"Creative Commons Attribution 4.0 International", URL: [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
+**[CCBY4]** "Creative Commons Attribution 4.0 International",
+URL: [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
