@@ -26,7 +26,7 @@ exceptions:
 * Denormal numbers are interpreted as zero. I.e. when the biased exponent is
   zero, the value is ±0, regardless of the value of the significand field.
 * All NaNs are interpreted as quiet NaNs. I.e. when all bits of the exponent
-  field are zero and the significand field is non-zero, the value is qNaN.
+  field are 1 (one) and the significand field is non-zero, the value is qNaN.
 
 Note: In the tables below, the *Significand bits* field denotes the number
 of *implicit* bits. The in-memory representation uses one less bit for the
@@ -43,7 +43,7 @@ The following standard binary floating-point formats are supported:
 | binary64  | Double precision    | 53               | 11            | 1023          |
 | binary128 | Quadruple precision | 113              | 15            | 16383         |
 
-A conforming implementation must support at least one of these standard
+A conforming implementation shall support at least one of these standard
 formats.
 
 ### 2.1.2 Non-standard formats
