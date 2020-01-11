@@ -44,11 +44,38 @@ There are a number of driving motivations behind LeanFloat:
   exceptions), for the purpose of improved performance and/or compatibility
   with systems where full IEEE 754 functionality is not available.
 
-## Caveats
-
-TBD
-
 ## Compatibility with IEEE 754
 
-TBD
+### Data interchange
+
+Floating-point values produced by an IEEE 754 system can safely be used in a
+LeanFloat system, and vice versa.
+
+### Operations
+
+Floating-point operations will behave identically on a LeanFloat system
+compared to an IEEE 754 system, as long as:
+
+* The IEEE 754 system uses the default rounding configuration.
+* No denormal numbers are part of the floating-point operations (see
+  [Caveats](#caveats)).
+* Floating-point exceptions are not used (see [Caveats](#caveats)).
+
+## Caveats
+
+A LeanFloat system is not 100% compatible with a fully compliant IEEE 754
+system. In other words, software written against the IEEE 754 standard may not
+produce the same result when running on a LeanFloat system (and vice versa).
+
+For example:
+
+* Software that needs to trap on floating-point exceptions (e.g. to catch
+  division by zero or overflow) may not function properly.
+* Since a LeanFloat system treats denormal numbers as zeros, it has a slightly
+  reduced numeric range. This can result in different computational results
+  compared to an IEEE 754 system.
+* Furthermore, the lack of support for denormal numbers in a LeanFloat system
+  voids some of the guarantees provided by an IEEE 754 system. For instance,
+  the relationship A != B => A - B != 0 does not hold for small numbers in a
+  LeanFloat system.
 
