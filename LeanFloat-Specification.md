@@ -23,7 +23,7 @@ The encoding in memory is the same as in **[IEEE754]**, with the following
 exceptions:
 
 * Denormal numbers are interpreted as zero. I.e. when the biased exponent is
-  zero, the value is +/- 0, regardless of the value of the significand field.
+  zero, the value is ±0, regardless of the value of the significand field.
 * All NaNs are interpreted as quiet NaNs. I.e. when all bits of the exponent
   field are zero and the significand field is non-zero, the value is qNaN.
 
@@ -69,11 +69,13 @@ is set).
 
 Whenever a denormal number is used as an input to a floating-point operation,
 it shall be treated as the value zero. The sign bit is preserved, so that a
-denormal value can be interpreted as either +0 or -0.
+denormal value can be interpreted as either +0 or -0, according to the sign
+bit.
 
 Whenever a floating-point operation produces a result that would be a denormal
 value according to **[IEEE754]**, it shall instead produce the value zero. The
-sign bit is preserved, so that the return value can be either +0 or -0.
+sign bit is preserved, so that the return value can be either +0 or -0,
+according to the sign of the result.
 
 ## 4. Rounding
 
