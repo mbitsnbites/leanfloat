@@ -6,10 +6,18 @@ LeanFloat is a simplified version of the [IEEE Standard for Floating-Point Arith
 
 For most intents and purposes it is compatible with the IEEE 754 standard, but with the following simplifications:
 
-* [Denormal numbers](https://en.wikipedia.org/wiki/Denormal_number) are not supported (they are treated as zeros).
-* Only a single [rounding mode](https://en.wikipedia.org/wiki/IEEE_754#Rounding_rules) is supported: [Round to nearest, ties to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even) (a.k.a. RTNE).
-* Signaling [NaNs](https://en.wikipedia.org/wiki/NaN) (sNaN) are not supported. All NaNs are treated as quiet NaNs (qNaN).
-* Floating point [exceptions](https://en.wikipedia.org/wiki/IEEE_754#Exception_handling) are not supported. The default return value for an operation that would signal an exception is returned (e.g. sqrt(-1) returns qNaN).
+* [Denormal numbers](https://en.wikipedia.org/wiki/Denormal_number) are not
+  supported (they are treated as zeros).
+* Only a single [rounding mode](https://en.wikipedia.org/wiki/IEEE_754#Rounding_rules)
+  is supported: [Round to nearest, ties to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even)
+  (a.k.a. RTNE).
+* Signaling [NaNs](https://en.wikipedia.org/wiki/NaN) (sNaN) are not
+  supported. All NaNs are treated as quiet NaNs (qNaN).
+* Floating-point [exceptions](https://en.wikipedia.org/wiki/IEEE_754#Exception_handling)
+  are not supported. The default return value for an operation that would
+  signal an exception is returned (e.g. sqrt(-1) returns qNaN).
+* Decimal floating-point formats (e.g. [decimal64](https://en.wikipedia.org/wiki/Decimal64_floating-point_format))
+  are not supported.
 
 ## Specification
 
@@ -17,7 +25,24 @@ For most intents and purposes it is compatible with the IEEE 754 standard, but w
 
 ## Motivation
 
-TBD
+There are a number of driving motivations behind LeanFloat:
+
+* Many existing systems, in particular SIMD/vector systems, do not fully
+  support IEEE 754, but instead a subset that is equal to or very similar to
+  LeanFloat. Yet, no proper common definition of this subset exists.
+* Floating-point functionality is becoming increasingly popular in domains
+  where full IEEE 754 compliance is neither necessary nor suitable (or even
+  possible) due to hardware constraints. The LeanFloat specification aims to
+  provide a least common denominator that can be targeted by such systems.
+* For areas such as education and hobby and open source development where
+  time and/or hardware constraints can be a limiting factor (e.g. if the
+  target hardware is an FPGA with limited logic resources), LeanFloat can make
+  floating-point functionality possible if a fully compliant IEEE 754
+  implementation would not be feasible.
+* It is common for software programs to configure the FPU in a mode that is
+  very similar to LeanFloat (e.g. disable denormal numbers and floating-point
+  exceptions), for the purpose of improved performance and/or compatibility
+  with systems where full IEEE 754 functionality is not available.
 
 ## Caveats
 
