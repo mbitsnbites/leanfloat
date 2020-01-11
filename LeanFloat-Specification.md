@@ -71,7 +71,7 @@ Whenever a floating-point operation produces a result that would be a denormal v
 
 ## 4. Rounding
 
-TBD
+All floating-point operations use the same rounding mode: Round to nearest, ties to even.
 
 ## 5. Exceptions
 
