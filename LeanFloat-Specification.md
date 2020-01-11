@@ -82,7 +82,19 @@ ties to even.
 
 ## 5. Exceptions
 
-TBD
+Neither floating-point exceptions nor status flags to indicate the occurrence
+of exceptional conditions are supported.
+
+Instead, qNaN is returned (and propagated) for invalid operations, and
+infinity is returned (and propagated) for overflow conditions.
+
+In particular:
+
+* An invalid operation returns qNaN.
+* Division by zero returns ±infinity.
+* Overflow returns ±infinity.
+* Underflow returns ±0.
+* Inexact returns the correctly rounded result.
 
 ## A. References
 
