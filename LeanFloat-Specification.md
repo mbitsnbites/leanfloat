@@ -63,7 +63,11 @@ implementation.
 
 ## 3. Denormal numbers
 
-TBD
+A denormal number is one where the biased exponent is zero (all exponent field bits are zero), and the significand field is non-zero (i.e. at least one bit is set).
+
+Whenever a denormal number is used as an input to a floating-point operation, it is treated as the value zero. The sign bit is preserved, so that a denormal value can be interpreted as either +0 or -0.
+
+Whenever a floating-point operation produces a result that would be a denormal value, it shall instead produce the value zero. The sign bit is preserved, so that the return value can be either +0 or -0.
 
 ## 4. Rounding
 
