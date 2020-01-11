@@ -4,20 +4,20 @@
 
 *This section is non-normative.*
 
-LeanFloat is a simplified version of the [IEEE Standard for Floating-Point Arithmetic (IEEE 754)](https://en.wikipedia.org/wiki/IEEE_754).
+LeanFloat is a simplified version of **[IEEE754]**.
 
-This work is licensed under a Creative Commons Attribution 4.0 International License.
+This work is licensed under **[CCBY4]**.
 
-## Introduction
+## 1. Introduction
 
 TBD
 
-### Formats
+## 2. Formats
 
 Only binary floating-point formats are considered by the LeanFloat
 specification. Decimal floating-point formats are not supported.
 
-#### Encoding
+### 2.1 Encoding
 
 The encoding in memory is the same as in IEEE 754, with the following
 exceptions:
@@ -31,7 +31,7 @@ Note: In the tables below, the *Significand bits* field denotes the number
 of *implicit* bits. The in-memory representation uses one less bit for the
 significand, since the most significant significand bit is implicitly 1.
 
-#### Standard formats
+### 2.1.1 Standard formats
 
 The following standard binary floating-point formats are supported:
 
@@ -45,7 +45,7 @@ The following standard binary floating-point formats are supported:
 A conforming implementation must support at least one of these standard
 formats.
 
-#### Non-standard formats
+### 2.1.2 Non-standard formats
 
 *This section is non-normative.*
 
@@ -61,14 +61,20 @@ purpose of providing a common definition:
 None of the non-standard formats need to be supported by a conforming
 implementation.
 
-### Denormal numbers
+## 3. Denormal numbers
 
 TBD
 
-### Rounding
+## 4. Rounding
 
 TBD
 
-### Exceptions
+## 5. Exceptions
 
 TBD
+
+## A. References
+
+**[IEEE754]**<br>"IEEE 754-2019 - IEEE Standard for Floating-Point Arithmetic", URL: [https://standards.ieee.org/content/ieee-standards/en/standard/754-2019.html](https://standards.ieee.org/content/ieee-standards/en/standard/754-2019.html)
+
+**[CCBY4]**<br>"Creative Commons Attribution 4.0 International", URL: [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)
