@@ -10,7 +10,8 @@ This work is licensed under **[CCBY4]**.
 
 ## 1. Introduction
 
-TBD
+An implementation that conforms to the LeandFloat specification must support
+**[IEEE754]**, with the exceptions provided by this specification.
 
 ## 2. Formats
 
