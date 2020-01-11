@@ -1,6 +1,6 @@
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
-
 # LeanFloat
+
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
 
 LeanFloat is a simplified version of the [IEEE Standard for Floating-Point Arithmetic (IEEE 754)](https://en.wikipedia.org/wiki/IEEE_754).
 
@@ -18,10 +18,6 @@ For most intents and purposes it is compatible with the IEEE 754 standard, but w
   signal an exception is returned (e.g. sqrt(-1) returns qNaN).
 * Decimal floating-point formats (e.g. [decimal64](https://en.wikipedia.org/wiki/Decimal64_floating-point_format))
   are not supported.
-
-## Specification
-
-[LeanFloat Specification (DRAFT)](LeanFloat-Specification.md)
 
 ## Motivation
 
@@ -43,6 +39,10 @@ There are a number of driving motivations behind LeanFloat:
   very similar to LeanFloat (e.g. disable denormal numbers and floating-point
   exceptions), for the purpose of improved performance and/or compatibility
   with systems where full IEEE 754 functionality is not available.
+
+## Specification
+
+[LeanFloat Specification (DRAFT)](LeanFloat-Specification.md)
 
 ## Compatibility with IEEE 754
 
