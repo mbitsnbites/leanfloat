@@ -1,6 +1,10 @@
 # LeanFloat
 
+[LeanFloat Specification (DRAFT)](LeanFloat-Specification.md)
+
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+
+## About
 
 LeanFloat is a simplified version of the [IEEE Standard for Floating-Point Arithmetic (IEEE 754)](https://en.wikipedia.org/wiki/IEEE_754).
 
@@ -39,10 +43,6 @@ There are a number of driving motivations behind LeanFloat:
   very similar to LeanFloat (e.g. disable subnormal numbers and floating-point
   exceptions), for the purpose of improved performance and/or compatibility
   with systems where full IEEE 754 functionality is not available.
-
-## Specification
-
-[LeanFloat Specification (DRAFT)](LeanFloat-Specification.md)
 
 ## Compatibility with IEEE 754
 
