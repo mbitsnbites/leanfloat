@@ -23,7 +23,7 @@ specification. Decimal floating-point formats are not supported.
 The encoding in memory is the same as in **[IEEE754]**, with the following
 exceptions:
 
-* Denormal numbers are interpreted as zero. I.e. when the biased exponent is
+* Subnormal numbers are interpreted as zero. I.e. when the biased exponent is
   zero, the value is ±0, regardless of the value of the significand field.
 * All NaNs are interpreted as quiet NaNs. I.e. when all bits of the exponent
   field are 1 (one) and the significand field is non-zero, the value is qNaN.
@@ -62,18 +62,18 @@ purpose of providing a common definition:
 None of the non-standard formats need to be supported by a conforming
 implementation.
 
-## 3. Denormal numbers
+## 3. Subnormal numbers
 
-A denormal number is one where the biased exponent is zero (all exponent field
+A subnormal number is one where the biased exponent is zero (all exponent field
 bits are zero), and the significand field is non-zero (i.e. at least one bit
 is set).
 
-Whenever a denormal number is used as an input to a floating-point operation,
+Whenever a subnormal number is used as an input to a floating-point operation,
 it shall be treated as the value zero. The sign bit is preserved, so that a
-denormal value can be interpreted as either +0 or -0, according to the sign
+subnormal value can be interpreted as either +0 or -0, according to the sign
 bit.
 
-Whenever a floating-point operation produces a result that would be a denormal
+Whenever a floating-point operation produces a result that would be a subnormal
 value according to **[IEEE754]**, it shall instead produce the value zero. The
 sign bit is preserved, so that the return value can be either +0 or -0,
 according to the sign of the result.

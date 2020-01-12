@@ -6,7 +6,7 @@ LeanFloat is a simplified version of the [IEEE Standard for Floating-Point Arith
 
 For most intents and purposes it is compatible with the IEEE 754 standard, but with the following simplifications:
 
-* [Denormal numbers](https://en.wikipedia.org/wiki/Denormal_number) are not
+* [Subnormal numbers](https://en.wikipedia.org/wiki/Denormal_number) are not
   supported (they are treated as zeros).
 * Only a single [rounding mode](https://en.wikipedia.org/wiki/IEEE_754#Rounding_rules)
   is supported: [Round to nearest, ties to even](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even)
@@ -36,7 +36,7 @@ There are a number of driving motivations behind LeanFloat:
   floating-point functionality possible if a fully compliant IEEE 754
   implementation would not be feasible.
 * It is common for software programs to configure the FPU in a mode that is
-  very similar to LeanFloat (e.g. disable denormal numbers and floating-point
+  very similar to LeanFloat (e.g. disable subnormal numbers and floating-point
   exceptions), for the purpose of improved performance and/or compatibility
   with systems where full IEEE 754 functionality is not available.
 
@@ -57,7 +57,7 @@ Floating-point operations will behave identically on a LeanFloat system
 compared to an IEEE 754 system, as long as:
 
 * The IEEE 754 system uses the default rounding configuration.
-* No denormal numbers are part of the floating-point operations (see
+* No subnormal numbers are part of the floating-point operations (see
   [Caveats](#caveats)).
 * Floating-point exceptions are not used (see [Caveats](#caveats)).
 
@@ -71,10 +71,10 @@ For example:
 
 * Software that needs to trap on floating-point exceptions (e.g. to catch
   division by zero or overflow) may not function properly.
-* Since a LeanFloat system treats denormal numbers as zeros, it has a slightly
+* Since a LeanFloat system treats subnormal numbers as zeros, it has a slightly
   reduced numeric range. This can result in different computational results
   compared to an IEEE 754 system.
-* Furthermore, the lack of support for denormal numbers in a LeanFloat system
+* Furthermore, the lack of support for subnormal numbers in a LeanFloat system
   voids some of the guarantees provided by an IEEE 754 system. For instance,
   the relationship A != B => A - B != 0 does not hold for small numbers in a
   LeanFloat system.
