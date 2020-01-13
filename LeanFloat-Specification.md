@@ -21,27 +21,24 @@ specification. Decimal floating-point formats are not supported.
 ### 2.1 Encoding
 
 The encoding in memory is the same as in **[IEEE754]**, with the following
-exceptions:
+exception:
 
-* Subnormal numbers are interpreted as zero. I.e. when the biased exponent is
-  zero, the value is ±0, regardless of the value of the significand field.
 * All NaNs are interpreted as quiet NaNs. I.e. when all bits of the exponent
   field are 1 (one) and the significand field is non-zero, the value is qNaN.
 
-Note: In the tables below, the *Significand bits* field denotes the number
-of *implicit* bits. The in-memory representation uses one less bit for the
-significand, since the most significant significand bit is implicitly 1.
+Additionally, if subnormal numbers are not supported, subnormal numbers are
+interpreted as zero by the LeanFloat system.
 
 ### 2.1.1 Standard formats
 
 The following standard binary floating-point formats are supported:
 
-| Name      | Common name         | Significand bits | Exponent bits | Exponent bias |
-| --------- | ------------------- | ---------------- | ------------- | ------------- |
-| binary16  | Half precision      | 11               | 5             | 15            |
-| binary32  | Single precision    | 24               | 8             | 127           |
-| binary64  | Double precision    | 53               | 11            | 1023          |
-| binary128 | Quadruple precision | 113              | 15            | 16383         |
+| Name      | Common name         | Significand bits<br>(implicit) | Exponent bits | Exponent bias |
+| --------- | ------------------- | ------------------------------ | ------------- | ------------- |
+| binary16  | Half precision      | 11                             | 5             | 15            |
+| binary32  | Single precision    | 24                             | 8             | 127           |
+| binary64  | Double precision    | 53                             | 11            | 1023          |
+| binary128 | Quadruple precision | 113                            | 15            | 16383         |
 
 A conforming implementation shall support at least one of these standard
 formats.
@@ -54,10 +51,10 @@ The following binary floating-point formats, which are not specified in
 **[IEEE754]**, are recognized by the LeanFloat specification with the sole
 purpose of providing a common definition:
 
-| Name      | Common name         | Significand bits | Exponent bits | Exponent bias |
-| --------- | ------------------- | ---------------- | ------------- | ------------- |
-| binary8   | Quarter precision   | 4                | 4             | 7             |
-| bfloat16  | Brain float         | 8                | 8             | 127           |
+| Name      | Common name         | Significand bits<br>(implicit) | Exponent bits | Exponent bias |
+| --------- | ------------------- | ------------------------------ | ------------- | ------------- |
+| binary8   | Quarter precision   | 4                              | 4             | 7             |
+| bfloat16  | Brain float         | 8                              | 8             | 127           |
 
 None of the non-standard formats need to be supported by a conforming
 implementation.
@@ -67,6 +64,13 @@ implementation.
 A subnormal number is one where the biased exponent is zero (all exponent field
 bits are zero), and the significand field is non-zero (i.e. at least one bit
 is set).
+
+The support for subnormal numbers is optional.
+
+### 3.1 Treat subnormal numbers as zero
+
+*This section only applies when subnormal numbers are not supported by the
+implementation.*
 
 Whenever a subnormal number is used as an input to a floating-point operation,
 it shall be treated as the value zero. The sign bit is preserved, so that a
@@ -83,7 +87,7 @@ according to the sign of the result.
 All floating-point operations use the same rounding mode: Round to nearest,
 ties to even.
 
-## 5. Exceptions
+## 5. Floating-point exceptions
 
 Neither floating-point exceptions nor status flags to indicate the occurrence
 of exceptional conditions are supported. Furthermore, no floating-point status
