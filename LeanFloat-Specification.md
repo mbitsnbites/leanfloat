@@ -39,6 +39,7 @@ The following standard binary floating-point formats are supported:
 | binary32  | Single precision    | 24                             | 8             | 127           |
 | binary64  | Double precision    | 53                             | 11            | 1023          |
 | binary128 | Quadruple precision | 113                            | 15            | 16383         |
+| binary256 | Octtuple precision  | 237                            | 19            | 262143        |
 
 A conforming implementation shall support at least one of these standard
 formats.
