@@ -82,7 +82,7 @@ supported:
 * If a LeanFloat system treats subnormal numbers as zeros, it has a slightly
   reduced numeric range. This can result in different computational results
   compared to an IEEE 754 system.
-* Furthermore, the optinal lack of support for subnormal numbers voids some of
+* Furthermore, the optional lack of support for subnormal numbers voids some of
   the guarantees provided by an IEEE 754 system. For instance, the relationship
   A != B => A - B != 0 does not hold for small numbers in a LeanFloat system
   without subnormals.
