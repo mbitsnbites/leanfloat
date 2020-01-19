@@ -1,8 +1,8 @@
-# LeanFloat
+# LeanFloat [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
 
-[LeanFloat Standard for Binary Floating-Point Arithmetic](LeanFloat-Standard-for-Binary-Floating-Point-Arithmetic.md)
+## Standard
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+The current version of the LeanFloat standard is v1.0: [LeanFloat Standard for Binary Floating-Point Arithmetic](LeanFloat-Standard-for-Binary-Floating-Point-Arithmetic.md)
 
 ## About
 
