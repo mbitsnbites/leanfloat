@@ -1,4 +1,4 @@
-# LeanFloat Standard for Binary Floating-Point Arithmetic (DRAFT)
+# LeanFloat Standard for Binary Floating-Point Arithmetic
 
 ## Abstract
 
