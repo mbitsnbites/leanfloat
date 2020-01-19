@@ -91,8 +91,8 @@ ties to even.
 ## 5. Floating-point exceptions
 
 Neither floating-point exceptions nor status flags to indicate the occurrence
-of exceptional conditions are supported. Furthermore, no floating-point status
-register is required to hold state related to floating-point exceptions.
+of exceptional conditions are supported (e.g. no floating-point status
+register is required to hold state related to floating-point exceptions).
 
 Instead, qNaN is returned (and propagated) for invalid operations, and
 infinity is returned (and propagated) for overflow conditions.
