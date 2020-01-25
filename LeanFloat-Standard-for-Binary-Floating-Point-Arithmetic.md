@@ -105,6 +105,13 @@ In particular:
 * Underflow returns ±0.
 * Inexact returns the correctly rounded result.
 
+Furhtermore, when converting floating-point numbers to integers:
+
+* The value is clamped to the range of the integer. This includes ±infinity,
+  that are clamped to the maximum and minimum value of the target integer
+  type.
+* Any NaN value is converted to the integer value zero (0).
+
 ## A. References
 
 **[IEEE754]** "IEEE 754-2019 - IEEE Standard for Floating-Point Arithmetic",
