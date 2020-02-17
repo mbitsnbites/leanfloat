@@ -2,9 +2,9 @@
 
 ## Standard
 
-The current working draft: [LeanFloat Standard for Binary Floating-Point Arithmetic - Draft](LeanFloat-Standard-for-Binary-Floating-Point-Arithmetic.md)
+The latest release: [LeanFloat Standard for Binary Floating-Point Arithmetic - v1.1](https://github.com/mbitsnbites/leanfloat/blob/v1.1/LeanFloat-Standard-for-Binary-Floating-Point-Arithmetic.md)
 
-The latest release: [LeanFloat Standard for Binary Floating-Point Arithmetic - v1.0](https://github.com/mbitsnbites/leanfloat/blob/v1.0/LeanFloat-Standard-for-Binary-Floating-Point-Arithmetic.md)
+The current working draft: [LeanFloat Standard for Binary Floating-Point Arithmetic - Draft](LeanFloat-Standard-for-Binary-Floating-Point-Arithmetic.md)
 
 ## About
 
