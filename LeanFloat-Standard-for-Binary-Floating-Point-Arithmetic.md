@@ -10,13 +10,13 @@ This work is licensed under **[CCBY4]**.
 
 ## 1. Introduction
 
-An implementation that conforms to the LeandFloat specification must support
+An implementation that conforms to the LeandFloat standard must support
 **[IEEE754]**, with the exceptions provided by this specification.
 
 ## 2. Formats
 
-Only binary floating-point formats are considered by the LeanFloat
-specification. Decimal floating-point formats are not supported.
+Only binary floating-point formats are considered by the LeanFloat standard.
+Decimal floating-point formats are not supported.
 
 ### 2.1 Encoding
 
@@ -49,8 +49,8 @@ formats.
 *This section is non-normative.*
 
 The following binary floating-point formats, which are not specified in
-**[IEEE754]**, are recognized by the LeanFloat specification with the sole
-purpose of providing a common definition:
+**[IEEE754]**, are recognized by the LeanFloat standard with the sole purpose
+of providing a common definition:
 
 | Name      | Common name         | Significand bits<br>(implicit) | Exponent bits | Exponent bias |
 | --------- | ------------------- | ------------------------------ | ------------- | ------------- |
