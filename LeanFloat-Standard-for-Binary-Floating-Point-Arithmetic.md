@@ -52,10 +52,10 @@ The following binary floating-point formats, which are not specified in
 **[IEEE754]**, are recognized by the LeanFloat standard with the sole purpose
 of providing a common definition:
 
-| Name      | Common name         | Significand bits<br>(implicit) | Exponent bits | Exponent bias |
-| --------- | ------------------- | ------------------------------ | ------------- | ------------- |
-| binary8   | Quarter precision   | 4                              | 4             | 7             |
-| bfloat16  | Brain float         | 8                              | 8             | 127           |
+| Name      | Common name          | Significand bits<br>(implicit) | Exponent bits | Exponent bias |
+| --------- | -------------------- | ------------------------------ | ------------- | ------------- |
+| binary8   | Quarter precision    | 4                              | 4             | 7             |
+| bfloat16  | Brain floating-point | 8                              | 8             | 127           |
 
 None of the non-standard formats need to be supported by a conforming
 implementation.
