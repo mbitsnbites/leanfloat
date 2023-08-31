@@ -1,3 +1,5 @@
+## ⚠️ This repository has moved to: https://gitlab.com/mbitsnbites/leanfloat
+
 # LeanFloat [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Standard
